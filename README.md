@@ -26,17 +26,23 @@ data-driven decisions.
 4. Your browser will open at `http://localhost:8501`.
 
 ## Features
-- **Sidebar filters**: genre, budget range, rating range, runtime range
-- **Colorful KPI cards**: total movies, average revenue, average budget,
-  average rating, average popularity
-- **Dataset preview** with CSV download of the filtered data
-- **Interactive charts** (Plotly), organized into tabs:
-  - Revenue Insights: Top 10 Revenue Movies, Budget vs Revenue, Popularity vs Revenue
-  - Genre & Ratings: Avg Revenue by Genre, Genre Share, Rating Distribution
-  - Distributions: Runtime Distribution, Budget Distribution
-- **Business Insights** — auto-generated from the filtered data (top genre,
-  budget/revenue correlation, popularity/revenue correlation, etc.)
-- **Business Recommendations** — actionable suggestions for producers
+- **Sidebar filters**: genre, budget category, box office outcome (profitable/flop),
+  runtime range, and a title search box
+- **Colorful KPI cards**: selected movies, avg budget, avg revenue, success rate, avg ROI
+- **Five tabs**:
+  - **Executive Overview** — Top 10 Revenue Movies, Budget vs Revenue, Avg Revenue by
+    Genre, Profitable vs Loss pie, plus auto-generated Business Insights & Recommendations
+  - **Movie Comparison** — pick 2-4 movies and compare them via table, bar chart, and
+    a normalized radar chart
+  - **Greenlight Simulator** — set a hypothetical budget/genre/runtime and get a
+    regression-based revenue/ROI prediction with a greenlight/caution/high-risk verdict
+  - **Genre & Runtime Insights** — ROI by genre, genre share, and box plots (not raw
+    histograms) for runtime, rating, and budget by genre — clearer for comparing spread
+    and outliers across genres
+  - **Smart Data Explorer** — pick which columns to view, then download the filtered
+    slice as CSV
+- The app auto-detects the CSV file even if it gets renamed (e.g. `movies (3).csv`),
+  so a filename mismatch won't break deployment again
 
 ## Data cleaning performed
 - Trimmed whitespace from text fields
